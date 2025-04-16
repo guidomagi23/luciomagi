@@ -14,7 +14,9 @@ const Footer = () => {
             rel="noreferrer"
             className="sns-links-footer"
           >
-            "Guido Magi"
+            <span style={{ lineHeight: "1.5", fontWeight: 900 }}>
+              Guido Magi
+            </span>
           </a>
         </p>
       </div>

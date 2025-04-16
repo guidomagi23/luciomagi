@@ -8,7 +8,7 @@ const Slider = () => {
         <iframe
           width="100%"
           height="700"
-          src="https://www.youtube.com/embed/videoseries?si=okyhce0Y5QX40Ym8&amp;list=PL1uK9zxRKreu_SpQ3DbcENBrBrBha77x2"
+          src="https://www.youtube.com/embed/videoseries?si=wMvdzJJE2W_yRs-g&amp;list=PLcmHq1zwllpNrOSxeB57uNDl4Hp6P-ZS3"
           title="Lucio Magi YouTube Playlist"
           frameBorder="0"
           allow="autoplay; encrypted-media"
@@ -24,7 +24,7 @@ const Slider = () => {
           frameBorder="no"
           allow="autoplay"
           title="Lucio Magi SoundCloud"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2007027228&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2007077184&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
         ></iframe>
       </div>
     </section>

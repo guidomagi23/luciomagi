@@ -22,16 +22,16 @@ const Navbar = ({ isScrolling }) => {
 
   return (
     <nav className={`navbar ${isScrolling > 20 ? "scrolling" : ""}`}>
-      <div className='navbar-logo' onClick={toTheTop}>
-        <i className="fab fa-solid fa-user user"> LM</i>
+      <div className="navbar-logo" onClick={toTheTop}>
+        <i className="fab "> LM</i>
       </div>
       <div className="navbar-toggle" onClick={toggleMenu}>
         &#9776;
       </div>
       <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
-        <li onClick={() => scrollToSection('about')}>Acerca de</li>
-        <li onClick={() => scrollToSection('projects')}>Lanzamientos</li>
-        <li onClick={() => scrollToSection('contact')}>Contacto</li>
+        <li onClick={() => scrollToSection("about")}>Acerca de</li>
+        <li onClick={() => scrollToSection("projects")}>Lanzamientos</li>
+        <li onClick={() => scrollToSection("contact")}>Contacto</li>
       </ul>
     </nav>
   );

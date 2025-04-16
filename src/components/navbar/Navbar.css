@@ -69,6 +69,14 @@
     display: none;
 }
 
+.navbar-logo svg {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo svg:hover {
+    transform: scale(1.1);
+}
 
 /* Mobile */
 @media only screen and (max-width: 960px) {
