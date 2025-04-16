@@ -20,7 +20,7 @@ const About = () => {
         <br />
         <p>
           Creando sets cargados de atmósferas profundas y progresiones
-          cuidadosamente construidas para gene - rar una experiencia inmersiva
+          cuidadosamente construidas para generar una experiencia inmersiva
           en la pista de baile.
         </p>
         <br />
@@ -47,7 +47,7 @@ const About = () => {
         <br />
         <p>
           Además de su trabajo como DJ, ha desarrollado su faceta como productor
-          musical, lanzando tracks pro - pios que han definido su identidad
+          musical, lanzando tracks propios que han definido su identidad
           artística. Entre sus producciones más destacadas se encuentran Inside
           Demon, Unlock Your Mind y Flow With Yourself, piezas que reflejan su
           visión sonora y la esencia de su estilo. Su música, caracterizada por
@@ -57,7 +57,7 @@ const About = () => {
         <br />
         <p>
           Con una proyección en constante crecimiento, Lucio Magi continúa
-          explorando nuevas formas de expre - sión dentro de la música
+          explorando nuevas formas de expresión dentro de la música
           electrónica, manteniéndose fiel a su identidad y evolucionando con
           cada set y producción.
         </p>

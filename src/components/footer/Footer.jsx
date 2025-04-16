@@ -2,27 +2,21 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="footer">
       <div className="design-by">
-        <p>Desarrollado por Guido Magi.</p>
-      </div>
-
-      <div className="sns-links-footer">
-        <a
-          href="https://www.linkedin.com/in/guidomagi/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i className="fab fa-linkedin linkedin"></i>
-        </a>
-        <a
-          href="https://github.com/guidomagi23"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i className="fab fa-github github"></i>
-        </a>
+        <p>
+          © Copyright 2025 - {currentYear} | All Rights Reserved | Powered by{" "}
+          <a
+            href="https://www.linkedin.com/in/guidomagi/"
+            target="_blank"
+            rel="noreferrer"
+            className="sns-links-footer"
+          >
+            "Guido Magi"
+          </a>
+        </p>
       </div>
     </footer>
   );
