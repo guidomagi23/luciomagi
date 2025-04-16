@@ -11,10 +11,11 @@
 
 .video {
     object-fit: cover;
-    height: 60vh;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
+        object-position: center bottom;
+        height: 60vh;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
 
 }
 
@@ -25,7 +26,7 @@
 
 .cover-container>h2 {
     color: rgba(255, 255, 255, 0.775);
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 5px;
 }
 
@@ -34,6 +35,24 @@
     font-size: 20px;
     margin-top: 5px;
         
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #535353;
+    /* podés personalizar el color hover */
 }
 
 @media only screen and (max-width: 960px) {
