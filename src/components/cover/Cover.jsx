@@ -14,7 +14,14 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const Cover = () => {
   return (
     <div className="cover-container">
-      <video className="video" src={coverVideo} autoPlay loop muted />
+      <video
+        className="video"
+        src={coverVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
       <h1>LUCIO MAGI</h1>
       <h2>Dj | Productor</h2>
       <div className="social-icons-cover">

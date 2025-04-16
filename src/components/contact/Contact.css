@@ -23,6 +23,10 @@
     text-align: center;
 }
 
+.booking-section a {
+    padding: 10px 20px;
+}
+
 .social-content {
     display: flex;
     align-items: center;
@@ -84,4 +88,17 @@
 
 .email-link:hover {
     opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+
+    .youtube-embed,
+    .soundcloud-embed {
+        flex: 1 1 100%;
+    }
+
+    .contact {
+        padding: 10px;
+        height: none;
+    }
 }

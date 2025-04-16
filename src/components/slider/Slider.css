@@ -1,237 +1,33 @@
-.carousel-container {
+.media-library {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2%;
+    padding: 15rem;
     flex-wrap: wrap;
-    align-items: center;
-    background-color: black;
-    padding: 20px 0 30px 0;
-    justify-content: center;
-
-}
-
-.carousel-title {
+    background-color: #000;
     color: white;
-    width: 100%;
-    text-align: left;
-    padding: 0 100px 35px 100px;
 }
 
-
-.carousel-title>h1 {
-    font-size: 40px;
+.youtube-embed,
+.soundcloud-embed {
+    flex: 1 1 48%;
+    /* Ocupan aproximadamente la mitad cada uno */
 }
 
-.carousel-title>h2 {
-    font-size: 25px;
-    margin-top: 25px;
-    padding: 0 30px 25px 30px;
-    text-align: left;
-}
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
 
-.carousel-title p {
-    font-size: 20px;
-    line-height: 1.6;
-    color: #d2d2d2;
-    padding: 0 40px 0 50px;
-}
+    .youtube-embed,
+    .soundcloud-embed {
+        flex: 1 1 100%;
+    }
 
-.carousel-title a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.carousel-title a:hover {
-    text-decoration: underline;
-    color: #0056b3;
-}
-
-.slide-container {
-    height: 80%;
-    border-radius: 40px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-}
-
-.slide-container-cipax {
-    height: 100%;
-    width: 100%;
-    border-radius: 40px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-}
-
-
-
-.img {
-    object-fit: contain;
-    transition: 0.5s;
-    display: flex;
-}
-
-.imgCipax {
-    object-fit: contain;
-    transition: 0.5s;
-    display: flex;
-    justify-content: center
-}
-
-.slide-container:hover>.img {
-    transform: scale(1.1);
-    opacity: 0.7;
-}
-
-.slide-container:hover>.imgCipax {
-    transform: scale(1.1);
-    opacity: 0.7;
-}
-
-.slide-container-cipax:hover>.img {
-    transform: scale(1.1);
-    opacity: 0.7;
-}
-
-.slide-container-cipax:hover>.imgCipax {
-    transform: scale(1.1);
-    opacity: 0.7;
-}
-
-.slide-desc {
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 20px 20px 20px 20px;
-    border-top-left-radius: 35px;
-    opacity: 0.7;
-
-}
-
-.slide-desc>span {
-    color: white;
-    display: block;
-    font-size: 22px;
-    padding: 0px 3 0px 0px;
-    text-align: left;
-}
-
-.slide-desc>a {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 15px;
-}
-
-.slide-link>.github {
-    color: rgb(247, 247, 247);
-    font-size: 30px;
-    padding: 3px;
-    border-radius: 50%;
-    background-color: #000000;
-    transition: 0.7s;
-}
-
-.github:hover {
-    background-color: #ffffff;
-}
-
-.slide-video>.film {
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    padding: 3px;
-    border-radius: 30%;
-    transition: 0.7s;
-}
-
-.film:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.BrainhubCarousel__container {
-    padding-block-end: 40px;
-}
-
-.BrainhubCarousel__arrows {
-    background-color: white;
-    border-radius: 50%;
-    margin: 20px;
-}
-
-.BrainhubCarousel__arrows>span {
-    border-color: black;
-}
-
-.BrainhubCarousel__arrows:hover {
-    background-color: white !important;
-}
-
-.BrainhubCarousel__arrows:hover>span {
-    border-color: rgb(255, 3, 3) !important;
-}
-
-@media only screen and (max-width: 960px) {
-    .carousel-container {
+    .media-library {
         flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        height: auto;
+        align-items: center;
     }
-
-    .carousel-title {
-        width: 100%;
-        text-align: center;
-        font-size: 25px;
-        padding: 0 0 0 0;
-    }
-
-    .img {
-        object-fit: scale-down;
-        transition: none;
-    }
-
-    .imgCipax {
-        object-fit: scale-down;
-        transition: none;
-    }
-
-    .slide-container {
-        height: 50%;
-        border-radius: 40px;
-        overflow: hidden;
-        position: relative;
-        cursor: pointer;
-        display: flex;
-    }
-
-    .slide-container:hover>.img {
-        transform: none;
-        opacity: 0.7;
-    }
-
-    .slide-container:hover>.imgCipax {
-        transform: none;
-        opacity: 0.7;
-    }
-
-    .slide-container-cipax {
-        height: 300px;
-        width: 300px;
-        border-radius: 40px;
-        overflow: hidden;
-    
-        cursor: pointer;
-        display: flex;
-    }
-
-    .slide-container-cipax:hover>.img {
-        transform: none;
-        opacity: 0.7;
-    }
-
-    .slide-container-cipax:hover>.imgCipax {
-        transform: none;
-        opacity: 0.7;
-    }
-
-
 }

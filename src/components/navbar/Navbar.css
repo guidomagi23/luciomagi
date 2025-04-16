@@ -35,8 +35,8 @@
 }
 
 .user:hover {
-    background-color: #ffffff;
-    color: #000000;
+    
+    color: rgb(155, 155, 155);
 }
 
 /* Menu */
@@ -61,8 +61,8 @@
 }
 
 .navbar-menu li:hover {
-    background-color: #ffffff;
-    color: #000000;
+    
+    color: rgb(155, 155, 155);
 }
 
 .navbar-toggle {
