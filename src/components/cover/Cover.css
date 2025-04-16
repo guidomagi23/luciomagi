@@ -37,22 +37,21 @@
         
 }
 
-.social-icons {
+.social-icons-cover {
     margin-top: 20px;
     display: flex;
     gap: 20px;
 }
 
-.social-icons a {
+.social-icons-cover a {
     color: white;
     font-size: 30px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-icons a:hover {
+.social-icons-cover a:hover {
     transform: scale(1.2);
     color: #535353;
-    /* podés personalizar el color hover */
 }
 
 @media only screen and (max-width: 960px) {

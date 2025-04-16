@@ -1,53 +1,60 @@
 import React from "react";
 import "./Contact.css";
-import cvguido from "../../media/cvguido.pdf";
+import qrImage from "../../media/QR.png";
+import {
+  FaYoutube,
+  FaInstagram,
+  FaSoundcloud,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <contact className="contact" id="contact">
-      <h1>Mis Datos</h1>
-      <div className="contact-info">
-        <a
-          className="fas fa-address-card btn"
-          href={cvguido}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <span className="btn-texto"> CURRICULUM VITAE</span>
-        </a>
+    <section className="contact" id="contact">
+      <div className="contact-wrapper">
+        {/* SOCIAL MEDIA */}
+        <div className="social-media-section">
+          <h2>Redes Sociales</h2>
+          <div className="social-content">
+            <div className="social-icons">
+              <a
+                href="https://www.youtube.com/@luciomagi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube className="icon" />
+              </a>
+              <a
+                href="https://soundcloud.com/magi-set"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaSoundcloud className="icon" />
+              </a>
+              <a
+                href="https://www.instagram.com/luciomagi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram className="icon" />
+              </a>
+            </div>
+            <img src={qrImage} alt="QR Lucio Magi" className="qr" />
+          </div>
+        </div>
 
-        <a
-          className="fas fa-solid fa-file btn"
-          href="https://refe.educacion.gob.ar/v/37566YKrMFRVA8IyAEl3x"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <span className="btn-texto"> ReFE</span>
-        </a>
-
-        <a
-          className="fa-brands fa-linkedin btn"
-          href="https://www.linkedin.com/in/guidomagi/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <span className="btn-texto"> LINKEDIN</span>
-        </a>
-
-        <a
-          className="fas fa-envelope btn"
-          href="mailto:guidomagi23@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <span className="btn-texto"> GMAIL</span>
-        </a>
+        {/* BOOKING CONTACT */}
+        <div className="booking-section">
+          <h2>Contacto de Reservas</h2>
+          <div className="booking-content">
+            <a href="mailto:luciiomagi@gmail.com" className="email-link">
+            <FaEnvelope className="icon email-icon"/>
+            <span className="email-text">luciiomagi@gmail.com</span>
+            </a>
+          </div>
+        </div>
       </div>
-    </contact>
+    </section>
   );
 };
 

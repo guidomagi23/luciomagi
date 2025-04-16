@@ -1,65 +1,86 @@
 .contact {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(178, 9, 9);
+    background-color: black;
     color: white;
-    z-index: -2;
-    bottom: 0;
-    left: 0;
+    padding: 4rem 2rem;
 }
 
-.contact-info>a {
-    color: rgb(255, 255, 255);
-    font-size: 23px;
-    font-weight: bold;
-    text-align: center;
-
-}
-
-
-.contact-info {
-    gap: 20px;
-    display: grid;
-    grid-gap: 20px;
-    align-items: center;
+.contact-wrapper {
+    display: flex;
     justify-content: center;
-    padding: 40px;
+    align-items: flex-start;
+    gap: 4rem;
+    flex-wrap: wrap;
 }
 
-.contact>h1 {
-    color: rgb(255, 255, 255);
-    font-size: 40px;
+/* SOCIAL MEDIA */
+.social-media-section h2,
+.booking-section h2 {
     font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
     text-align: center;
-    padding: 20px 0 5px 0;
 }
 
-.contact-sns {
-    width: 70%;
-    position: absolute;
-    bottom: 40px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+.social-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.icon {
+    font-size: 3rem;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    color: rgb(155, 155, 155);
+}
+
+.qr {
+    width: 180px;
+    height: auto;
+}
+
+/* BOOKING SECTION */
+.booking-section {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
+.booking-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
-@media only screen and (max-width: 960px) {
-    .contact-info {
-        text-align: center;
-        padding: 20px 20px 20px 20px;
-        font-size: 20px;
-        width: 100%;
-        max-width: 100%;
-    }
+.email-icon {
+    font-size: 2.5rem;
+}
 
-    .contact-sns {
-        display: table;
-        padding: 0 50px 0 50px;
-        text-align: center;
-    }
+.email-text {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
 
+.email-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.email-link:hover {
+    opacity: 0.8;
 }

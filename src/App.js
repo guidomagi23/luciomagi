@@ -4,7 +4,6 @@ import Cover from "./components/cover/Cover";
 import Navbar from './components/navbar/Navbar';
 import About from './components/about/About';
 import Slider from './components/slider/Slider';
-import Info from './components/info/Info';
 import Footer from './components/footer/Footer';
 import Contact from './components/contact/Contact';
 
@@ -26,7 +25,6 @@ function App() {
       <Cover />
       <About />
       <Slider />
-      <Info />
       <Contact />
       <Footer />
     </div>

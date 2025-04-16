@@ -17,7 +17,7 @@ const Cover = () => {
       <video className="video" src={coverVideo} autoPlay loop muted />
       <h1>LUCIO MAGI</h1>
       <h2>Dj | Productor</h2>
-      <div className="social-icons">
+      <div className="social-icons-cover">
         <a
           href="https://soundcloud.com/magi-set"
           target="_blank"
