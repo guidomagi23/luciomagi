@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Navbar.css";
+import aboutImagen from "../../media/logo192.png";
 
 const Navbar = ({ isScrolling }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = ({ isScrolling }) => {
   return (
     <nav className={`navbar ${isScrolling > 20 ? "scrolling" : ""}`}>
       <div className="navbar-logo" onClick={toTheTop}>
-        <i className="fab "> LM</i>
+        <img src={aboutImagen} alt="about" />
       </div>
       <div className="navbar-toggle" onClick={toggleMenu}>
         &#9776;

@@ -54,6 +54,42 @@
     color: #535353;
 }
 
+.lucio-title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.lucio-title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageLucio,
+.imageMagi {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 40vw;
+    max-width: 250px;
+    aspect-ratio: 500 / 140;
+}
+
+.imageLucio {
+    background-image: url(/public/images/lucio.png);
+}
+
+.imageMagi {
+    background-image: url(/public/images/magi.png);  
+}
+
+
+
+
 @media only screen and (max-width: 960px) {
     .cover-container>h1 {
         font-size: 40px;

@@ -1,6 +1,7 @@
 import React from "react";
 import "../cover/Cover.css";
 import coverVideo from "../../media/coverVideo.mp4";
+import LucioMagiTitle from "./LucioMagiTitle";
 
 // Importación de FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,7 +23,7 @@ const Cover = () => {
         muted
         playsInline
       />
-      <h1>LUCIO MAGI</h1>
+      <LucioMagiTitle />
       <h2>Dj | Productor</h2>
       <div className="social-icons-cover">
         <a

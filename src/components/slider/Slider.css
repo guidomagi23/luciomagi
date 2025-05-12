@@ -9,6 +9,14 @@
     color: white;
 }
 
+.youtube-embed-mobile {
+    display: none;
+}
+
+.soundcloud-embed-mobile {
+    display: none;
+}
+
 .youtube-embed,
 .soundcloud-embed {
     flex: 1 1 48%;
@@ -18,16 +26,24 @@
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
 
-    .youtube-embed,
-    .soundcloud-embed {
-        flex: 1 1 100%;
-    }
-
     .media-library {
         flex-direction: column;
-        gap: 20px;
-        padding: 10px;
-        height: auto;
+        gap: 40px;
+        padding: 12rem 0rem 12rem 0rem;
         align-items: center;
     }
+
+
+    .youtube-embed-mobile,
+    .soundcloud-embed-mobile {
+        display: block;
+    }
+
+    .youtube-embed,
+    .soundcloud-embed {
+        display: none;
+    }
 }
+
+
+

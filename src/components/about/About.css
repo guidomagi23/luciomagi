@@ -33,6 +33,23 @@
 .about-img>img {
     border-radius: 30px;
 }
+
+.read-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #333;
+}
+
 @media only screen and (max-width: 960px) {
     .about-countainer {
         flex-direction: column;
