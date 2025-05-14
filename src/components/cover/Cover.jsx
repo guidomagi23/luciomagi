@@ -24,8 +24,8 @@ const Cover = () => {
         playsInline
       />
       <LucioMagiTitle />
-      <h2>Dj | Productor</h2>
-      <div className="social-icons-cover">
+      <h2 data-aos="zoom-out" >Dj | Productor</h2>
+      <div className="social-icons-cover" data-aos="zoom-in">
         <a
           href="https://soundcloud.com/magi-set"
           target="_blank"

@@ -6,6 +6,8 @@ import About from './components/about/About';
 import Slider from './components/slider/Slider';
 import Footer from './components/footer/Footer';
 import Contact from './components/contact/Contact';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   const [scrollHeight, setScrollHeight] = useState(0);
@@ -18,6 +20,13 @@ function App() {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
   }, [scrollHeight])
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2300, // duración de la animación
+      once: true,     // si quieres que se ejecute solo una vez
+    });
+  }, []);
 
   return (
     <div className="App">

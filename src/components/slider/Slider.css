@@ -1,6 +1,6 @@
 .media-library {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     gap: 2%;
     padding: 15rem 0 15rem 0;
@@ -50,7 +50,7 @@
 }
 
 .embed-title h2 {
-    font-size: 1.5rem;
+    font-size: 35px;
     margin: 0;
 }
 

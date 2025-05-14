@@ -6,8 +6,8 @@ const LucioMagiTitle = () => {
   return (
     <div className="lucio-title-wrapper">
       <div className="lucio-title">
-        <div className="imageLucio" />
-        <div className="imageMagi" />
+        <div className="imageLucio" data-aos="fade-right" />
+        <div className="imageMagi"  data-aos="fade-left"/>
       </div>
     </div>
   );

@@ -6,11 +6,19 @@ const Slider = () => {
   return (
     <section className="media-library" id="projects">
       <div className="embed-container seccion-negra">
-        <div className="embed-title">
+        <div
+          className="embed-title"
+          data-aos="fade-right"
+          data-aos-easing="ease-in-sine"
+        >
           <FaYoutube className="platform-icon youtube-icon" />
           <h2>En YouTube</h2>
         </div>
-        <div className="youtube-embed">
+        <div
+          className="youtube-embed"
+          data-aos="fade-right"
+          data-aos-easing="ease-in-sine"
+        >
           <iframe
             width="800"
             height="800"
@@ -35,11 +43,19 @@ const Slider = () => {
       </div>
 
       <div className="embed-container">
-        <div className="embed-title">
+        <div
+          className="embed-title"
+          data-aos="fade-left"
+          data-aos-easing="ease-in-sine"
+        >
           <FaSoundcloud className="platform-icon soundcloud-icon" />
           <h2>En SoundCloud</h2>
         </div>
-        <div className="soundcloud-embed">
+        <div
+          className="soundcloud-embed"
+          data-aos="fade-left"
+          data-aos-easing="ease-in-sine"
+        >
           <iframe
             width="800"
             height="800"

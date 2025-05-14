@@ -14,8 +14,8 @@ const About = () => {
   }, []);
 
   return (
-    <div className="about-countainer" id="about">
-      <div className="about-desc">
+    <div className="about-countainer">
+      <div className="about-desc" data-aos="fade-right">
         <h1>Dj|Productor</h1>
 
         <p>
@@ -89,8 +89,8 @@ const About = () => {
         )}
       </div>
 
-      <div className="about-img">
-        <img src={aboutImagen} alt="about" />
+      <div className="about-img" data-aos="fade-left">
+        <img src={aboutImagen} alt="Retrato de Lucio Magi actuando en vivo" />
       </div>
     </div>
   );
