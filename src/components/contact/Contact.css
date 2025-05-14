@@ -101,4 +101,9 @@
         padding: 10px;
         height: none;
     }
+
+    .social-media-section h2,
+    .booking-section h2 {
+        font-size: 28px;
+    }
 }

@@ -39,7 +39,13 @@ const Contact = () => {
                 <FaInstagram className="icon" />
               </a>
             </div>
-            <img src={qrImage} alt="QR Lucio Magi" className="qr" />
+            <a
+              href="https://linktr.ee/luciomagi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={qrImage} alt="QR Lucio Magi" className="qr" />
+            </a>
           </div>
         </div>
 
@@ -48,8 +54,8 @@ const Contact = () => {
           <h2>Contacto de Reservas</h2>
           <div className="booking-content">
             <a href="mailto:luciiomagi@gmail.com" className="email-link">
-            <FaEnvelope className="icon email-icon"/>
-            <span className="email-text">luciiomagi@gmail.com</span>
+              <FaEnvelope className="icon email-icon" />
+              <span className="email-text">luciiomagi@gmail.com</span>
             </a>
           </div>
         </div>

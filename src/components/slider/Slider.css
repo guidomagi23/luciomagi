@@ -1,9 +1,9 @@
 .media-library {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     gap: 2%;
-    padding: 15rem;
+    padding: 15rem 0 15rem 0;
     flex-wrap: wrap;
     background-color: #000;
     color: white;
@@ -21,6 +21,37 @@
 .soundcloud-embed {
     flex: 1 1 48%;
     /* Ocupan aproximadamente la mitad cada uno */
+}
+
+.embed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.platform-icon {
+    font-size: 3rem;
+}
+
+.youtube-icon {
+    color: #FF0000;
+}
+
+.soundcloud-icon {
+    color: #FF5500;
+}
+
+.embed-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.embed-title h2 {
+    font-size: 1.5rem;
+    margin: 0;
 }
 
 /* Estilos para dispositivos móviles */
