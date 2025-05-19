@@ -12,7 +12,7 @@ const Slider = () => {
           data-aos-easing="ease-in-sine"
         >
           <FaYoutube className="platform-icon youtube-icon" />
-          <h2>En YouTube</h2>
+          <h2>YouTube</h2>
         </div>
         <div
           className="youtube-embed"
@@ -49,7 +49,7 @@ const Slider = () => {
           data-aos-easing="ease-in-sine"
         >
           <FaSoundcloud className="platform-icon soundcloud-icon" />
-          <h2>En SoundCloud</h2>
+          <h2>SoundCloud</h2>
         </div>
         <div
           className="soundcloud-embed"

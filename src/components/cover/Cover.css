@@ -11,11 +11,11 @@
 
 .video {
     object-fit: cover;
-        object-position: center bottom;
-        height: 60vh;
-        width: 100%;
-        position: absolute;
-        z-index: -1;
+    object-position: center bottom;
+    height: 60vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
 
 }
 
@@ -34,7 +34,7 @@
     color: rgba(255, 255, 255, 0.775);
     font-size: 20px;
     margin-top: 5px;
-        
+
 }
 
 .social-icons-cover {
@@ -74,17 +74,21 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+
+}
+
+.imageLucio {
+    background-image: url(/public/images/lucio.png);
     width: 40vw;
     max-width: 250px;
     aspect-ratio: 500 / 140;
 }
 
-.imageLucio {
-    background-image: url(/public/images/lucio.png);
-}
-
 .imageMagi {
-    background-image: url(/public/images/magi.png);  
+    background-image: url(/public/images/magi.png);
+    width: 40vw;
+    max-width: 225px;
+    aspect-ratio: 500 / 140;
 }
 
 
@@ -114,5 +118,17 @@
 
     .cover-container {
         height: 40vh;
+    }
+
+    .imageMagi {
+        width: 40vw;
+        max-width: 180px;
+        aspect-ratio: 500 / 140;
+    }
+
+    .imageLucio{
+        width: 45vw;
+        max-width: 210px;
+        aspect-ratio: 500 / 140;
     }
 }
