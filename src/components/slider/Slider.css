@@ -74,6 +74,10 @@
     .soundcloud-embed {
         display: none;
     }
+
+    .embed-title h2 {
+        font-size: 30px;
+   }
 }
 
 
