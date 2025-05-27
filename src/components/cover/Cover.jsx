@@ -22,6 +22,8 @@ const Cover = () => {
         loop
         muted
         playsInline
+        type="video/mp4"
+        title="Lucio Magi - Productor y DJ"
       />
       <LucioMagiTitle />
       <h2 data-aos="zoom-out" >Dj | Productor</h2>
@@ -30,6 +32,7 @@ const Cover = () => {
           href="https://soundcloud.com/magi-set"
           target="_blank"
           rel="noopener noreferrer"
+          title="Soundcloud Lucio Magi"
         >
           <FontAwesomeIcon icon={faSoundcloud} />
         </a>
@@ -37,6 +40,7 @@ const Cover = () => {
           href="https://www.youtube.com/@luciomagi"
           target="_blank"
           rel="noopener noreferrer"
+          title="Youtube Lucio Magi"
         >
           <FontAwesomeIcon icon={faYoutube} />
         </a>
@@ -44,10 +48,11 @@ const Cover = () => {
           href="https://www.instagram.com/luciomagi"
           target="_blank"
           rel="noopener noreferrer"
+          title="Instagram Lucio Magi"
         >
           <FontAwesomeIcon icon={faInstagram} />
         </a>
-        <a href="mailto:luciomagi@gmail.com">
+        <a href="mailto:luciomagi@gmail.com" title="Email Lucio Magi">
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
       </div>

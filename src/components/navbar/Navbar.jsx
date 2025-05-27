@@ -24,7 +24,7 @@ const Navbar = ({ isScrolling }) => {
   return (
     <nav className={`navbar ${isScrolling > 20 ? "scrolling" : ""}`}>
       <div className="navbar-logo" onClick={toTheTop}>
-        <img src={aboutImagen} alt="Lucio Magi" />
+        <img src={aboutImagen} alt="Lucio Magi" title='Logo Lucio Magi'/>
       </div>
       <div className="navbar-toggle" onClick={toggleMenu}>
         &#9776;

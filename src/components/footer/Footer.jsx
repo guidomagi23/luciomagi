@@ -13,6 +13,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
             className="sns-links-footer"
+            title="Linkedin Guido Magi"
           >
             <span style={{ lineHeight: "1.5", fontWeight: 900 }}>
               Guido Magi

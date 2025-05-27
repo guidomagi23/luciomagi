@@ -17,7 +17,7 @@ const About = () => {
     <section className="about" id="about">
       <div className="about-countainer">
         <div className="about-desc" data-aos="fade-right">
-          <h1>Dj|Productor</h1>
+          <h1>Dj | Productor</h1>
 
           <p>
             Lucio Magi es un DJ y productor nacido en la ciudad de Santa Fe. Su
@@ -92,7 +92,7 @@ const About = () => {
         </div>
 
         <div className="about-img" data-aos="fade-left">
-          <img src={aboutImagen} alt="Retrato de Lucio Magi actuando en vivo" />
+          <img src={aboutImagen} alt="Retrato de Lucio Magi actuando en vivo" title="Lucio Magi Dj y Productor"/>
         </div>
       </div>
     </section>

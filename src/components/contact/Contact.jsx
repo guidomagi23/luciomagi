@@ -21,6 +21,7 @@ const Contact = () => {
                 href="https://www.youtube.com/@luciomagi"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Youtube Lucio Magi"
               >
                 <FaYoutube className="icon" />
               </a>
@@ -28,6 +29,7 @@ const Contact = () => {
                 href="https://soundcloud.com/magi-set"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Soundcloud Lucio Magi"
               >
                 <FaSoundcloud className="icon" />
               </a>
@@ -35,6 +37,7 @@ const Contact = () => {
                 href="https://www.instagram.com/luciomagi"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Instagram Lucio Magi"
               >
                 <FaInstagram className="icon" />
               </a>
@@ -43,8 +46,9 @@ const Contact = () => {
               href="https://linktr.ee/luciomagi"
               target="_blank"
               rel="noopener noreferrer"
+              title="Linktree Lucio Magi"
             >
-              <img src={qrImage} alt="QR Lucio Magi" className="qr" />
+              <img src={qrImage} alt="QR Lucio Magi" className="qr" title="Linktree Lucio Magi"/>
             </a>
           </div>
         </div>
@@ -53,9 +57,9 @@ const Contact = () => {
         <div className="booking-section">
           <h2>Contacto de Reservas</h2>
           <div className="booking-content">
-            <a href="mailto:luciiomagi@gmail.com" className="email-link">
+            <a href="mailto:luciiomagi@gmail.com" className="email-link" title="Email Lucio Magi">
               <FaEnvelope className="icon email-icon" />
-              <span className="email-text">luciiomagi@gmail.com</span>
+              <span className="email-text" >luciiomagi@gmail.com</span>
             </a>
           </div>
         </div>
