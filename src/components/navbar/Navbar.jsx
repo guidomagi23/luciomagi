@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import aboutImagen from "../../media/logo192.png";
 
@@ -24,7 +25,9 @@ const Navbar = ({ isScrolling }) => {
   return (
     <nav className={`navbar ${isScrolling > 20 ? "scrolling" : ""}`}>
       <div className="navbar-logo" onClick={toTheTop}>
-        <img src={aboutImagen} alt="Lucio Magi" title='Logo Lucio Magi'/>
+        <Link to="/">
+          <img src={aboutImagen} alt="Lucio Magi" title="Logo Lucio Magi" />
+        </Link>
       </div>
       <div className="navbar-toggle" onClick={toggleMenu}>
         &#9776;
@@ -33,6 +36,11 @@ const Navbar = ({ isScrolling }) => {
         <li onClick={() => scrollToSection("about")}>Acerca de</li>
         <li onClick={() => scrollToSection("projects")}>Lanzamientos</li>
         <li onClick={() => scrollToSection("contact")}>Contacto</li>
+        <li>
+          <Link to="/links" onClick={() => setIsMenuOpen(false)}>
+            Links
+          </Link>
+        </li>
       </ul>
     </nav>
   );
