@@ -1,4 +1,4 @@
-.cover-container {
+﻿.cover-container {
     height: 60vh;
     object-fit: contain;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
@@ -54,6 +54,27 @@
     color: #535353;
 }
 
+/* Estilos específicos para cada icono */
+.social-icons-cover a[title*="Spotify"]:hover {
+    color: #1DB954;
+}
+
+.social-icons-cover a[title*="Soundcloud"]:hover {
+    color: #FF5500;
+}
+
+.social-icons-cover a[title*="Youtube"]:hover {
+    color: #FF0000;
+}
+
+.social-icons-cover a[title*="Instagram"]:hover {
+    color: #E4405F;
+}
+
+.social-icons-cover a[title*="Email"]:hover {
+    color: #4285F4;
+}
+
 .lucio-title-wrapper {
     display: flex;
     justify-content: center;
@@ -90,9 +111,6 @@
     max-width: 225px;
     aspect-ratio: 500 / 140;
 }
-
-
-
 
 @media only screen and (max-width: 960px) {
     .cover-container>h1 {

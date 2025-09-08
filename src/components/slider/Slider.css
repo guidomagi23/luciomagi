@@ -1,8 +1,8 @@
-.media-library {
+﻿.media-library {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 2%;
+    gap: 4%;
     padding: 15rem 0 15rem 0;
     flex-wrap: wrap;
     background-color: #000;
@@ -17,8 +17,13 @@
     display: none;
 }
 
+.spotify-embed-mobile {
+    display: none;
+}
+
 .youtube-embed,
-.soundcloud-embed {
+.soundcloud-embed,
+.spotify-embed {
     flex: 1 1 48%;
     /* Ocupan aproximadamente la mitad cada uno */
 }
@@ -29,7 +34,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom: 3rem;
 }
+
 .platform-icon {
     font-size: 3rem;
 }
@@ -42,11 +49,15 @@
     color: #FF5500;
 }
 
+.spotify-icon {
+    color: #1DB954;
+}
+
 .embed-title {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .embed-title h2 {
@@ -59,19 +70,24 @@
 
     .media-library {
         flex-direction: column;
-        gap: 40px;
+        gap: 60px;
         padding: 12rem 0rem 12rem 0rem;
         align-items: center;
     }
 
+    .embed-container {
+        margin-bottom: 2rem;
+    }
 
     .youtube-embed-mobile,
-    .soundcloud-embed-mobile {
+    .soundcloud-embed-mobile,
+    .spotify-embed-mobile {
         display: block;
     }
 
     .youtube-embed,
-    .soundcloud-embed {
+    .soundcloud-embed,
+    .spotify-embed {
         display: none;
     }
 
@@ -79,6 +95,3 @@
         font-size: 30px;
    }
 }
-
-
-

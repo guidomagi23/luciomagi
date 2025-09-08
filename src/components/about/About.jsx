@@ -20,20 +20,9 @@ const About = () => {
           <h1>Dj | Productor</h1>
 
           <p>
-            Lucio Magi es un DJ y productor nacido en la ciudad de Santa Fe. Su
-            propuesta musical se distingue por la fusión de melodías hipnóticas
-            y vocales envolventes, combinadas con un groove minimalista que
-            define su estilo. Su enfoque sonoro transita entre los géneros:
-          </p>
-          <br />
-          <p>
-            <b>Minimal Melodic Techno | Techno</b>
-          </p>
-          <br />
-          <p>
-            Creando sets cargados de atmósferas profundas y progresiones
-            cuidadosamente construidas para generar una experiencia inmersiva en
-            la pista de baile.
+            Creando sets cargados de <b>atmósferas profundas</b> y{" "}
+            <b>progresiones cuidadosamente construidas</b> para generar una{" "}
+            <b>experiencia inmersiva</b> en la pista de baile.
           </p>
 
           {/* Mostrar botón solo si es móvil y no se está mostrando todo */}
@@ -48,51 +37,64 @@ const About = () => {
             <>
               <br />
               <p>
-                Desde sus inicios, su pasión por la música electrónica lo llevó
-                a explorar distintos escenarios, logrando presentarse en
+                Desde sus inicios, su <b>pasión por la música electrónica</b> lo
+                llevó a explorar distintos escenarios, logrando presentarse en
                 diversos puntos del país. Ha compartido su música en reconocidos
-                destinos como Mar del Plata (Playa Grande) y Bariloche (Cerro
-                Catedral), además de ser parte de eventos organizados por Cloud
-                Producciones, realizados en espacios emblemáticos como Altos de
-                Okcidenta, Azopardo Club y Pinta. También formó parte de la 14°
-                Bienal de Arte Joven en la Manzana Histórica de la UNL, uno de
-                los eventos culturales más relevantes de la región.
+                destinos como <b>Mar del Plata (Playa Grande)</b> y{" "}
+                <b>Bariloche (Cerro Catedral)</b>, además de ser parte de{" "}
+                <b>Ciclos de Musica Electrónica como MUSHROOM</b> y eventos
+                organizados por <b>Cloud Producciones</b>, realizados en
+                espacios emblemáticos como <b>Altos de Okcidenta</b>,{" "}
+                <b>Azopardo Club</b> y <b>Pinta</b>. También formó parte de la{" "}
+                <b>14° Bienal de Arte Joven</b> en la{" "}
+                <b>Manzana Histórica de la UNL</b>, uno de los eventos
+                culturales más relevantes de la región.
               </p>
               <br />
               <p>
-                A nivel local, su talento ha sido reconocido en la escena
-                nocturna de Santa Fe, donde ha tocado en bares y clubes icónicos
-                como One Six, La Grieta, Monkey Bar, Peñón del Águila, Liverpool
-                y Hammer, así como en paradores de playa y eventos privados
-                tanto en Santa Fe como en Gualeguaychú. Su capacidad para leer
-                la pista y construir sets dinámicos lo ha llevado a consolidarse
-                como una figura en ascenso dentro del circuito electrónico
-                nacional.
+                A nivel local, su talento ha sido reconocido en la{" "}
+                <b>escena nocturna de Santa Fe</b>, donde ha tocado en bares y
+                clubes icónicos como <b>One Six</b>, <b>La Grieta</b>,{" "}
+                <b>Monkey Bar</b>, <b>Peñón del Águila</b>, <b>Liverpool</b> y{" "}
+                <b>Hammer</b>, así como en paradores de playa y eventos privados
+                tanto en <b>Santa Fe</b> como en <b>Gualeguaychú</b>. Su
+                capacidad para <b>leer la pista</b> y construir{" "}
+                <b>sets dinámicos</b> lo ha llevado a consolidarse como una{" "}
+                <b>figura en ascenso</b> dentro del{" "}
+                <b>circuito electrónico nacional</b>.
               </p>
               <br />
               <p>
-                Además de su trabajo como DJ, ha desarrollado su faceta como
-                productor musical, lanzando tracks propios que han definido su
-                identidad artística. Entre sus producciones más destacadas se
-                encuentran Inside Demon, Unlock Your Mind y Flow With Yourself,
-                piezas que reflejan su visión sonora y la esencia de su estilo.
-                Su música, caracterizada por una cuidadosa selección de sonidos
-                y una estética pulida, busca transportar al oyente a un viaje
-                sensorial único.
+                Además de su trabajo como <b>DJ</b>, ha desarrollado su faceta
+                como <b>productor musical</b>, lanzando <b>tracks propios</b>{" "}
+                que han definido su <b>identidad artística</b>. Entre sus
+                producciones más destacadas se encuentran <b>Break The Loop</b>,{" "}
+                <b>Dirty Talking</b>, <b>Evolving Rhythm</b> y{" "}
+                <b>Unlock Your Mind</b>, piezas que reflejan su{" "}
+                <b>visión sonora</b> y la <b>esencia de su estilo</b>. Su
+                música, caracterizada por una{" "}
+                <b>cuidadosa selección de sonidos</b> y una{" "}
+                <b>estética pulida</b>, busca transportar al oyente a un{" "}
+                <b>viaje sensorial único</b>.
               </p>
               <br />
               <p>
-                Con una proyección en constante crecimiento, Lucio Magi continúa
-                explorando nuevas formas de expresión dentro de la música
-                electrónica, manteniéndose fiel a su identidad y evolucionando
-                con cada set y producción.
+                Con una <b>proyección en constante crecimiento</b>,{" "}
+                <b>Lucio Magi</b> continúa explorando nuevas formas de expresión
+                dentro de la <b>música electrónica</b>, manteniéndose fiel a su{" "}
+                <b>identidad</b> y evolucionando con cada <b>set</b> y{" "}
+                <b>producción</b>.
               </p>
             </>
           )}
         </div>
 
         <div className="about-img" data-aos="fade-left">
-          <img src={aboutImagen} alt="Retrato de Lucio Magi actuando en vivo" title="Lucio Magi Dj y Productor"/>
+          <img
+            src={aboutImagen}
+            alt="Retrato de Lucio Magi actuando en vivo"
+            title="Lucio Magi Dj y Productor"
+          />
         </div>
       </div>
     </section>

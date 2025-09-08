@@ -1,7 +1,7 @@
 .contact {
     background-color: black;
     color: white;
-    padding: 15rem ;
+    padding: 15rem;
     height: 90vh;
 }
 
@@ -35,14 +35,17 @@
 
 .social-icons {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .icon {
-    font-size: 4rem;
+    font-size: 3.2rem;
     color: white;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .icon:hover {
@@ -50,9 +53,25 @@
     color: rgb(155, 155, 155);
 }
 
-.qr {
-    width: 250px;
-    height: auto;
+/* Estilos espec�ficos para cada icono */
+.social-icons a[title*="Spotify"]:hover .icon {
+    color: #1DB954;
+}
+
+.social-icons a[title*="Youtube"]:hover .icon {
+    color: #FF0000;
+}
+
+.social-icons a[title*="Soundcloud"]:hover .icon {
+    color: #FF5500;
+}
+
+.social-icons a[title*="Instagram"]:hover .icon {
+    color: #E4405F;
+}
+
+.social-icons a[title*="Linktree"]:hover .icon {
+    color: #00C851;
 }
 
 /* BOOKING SECTION */
@@ -69,7 +88,7 @@
 }
 
 .email-icon {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
 }
 
 .email-text {
@@ -105,5 +124,37 @@
     .social-media-section h2,
     .booking-section h2 {
         font-size: 28px;
+    }
+}
+
+
+
+/* Ajustar el �ltimo icono para que est� centrado en la segunda fila */
+.social-icons a:nth-child(5) {
+    grid-column: 2;
+}
+
+
+/* Responsive design para m�viles */
+@media (max-width: 768px) {
+    .social-icons {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .social-icons a:nth-child(5) {
+        grid-column: 1;
+    }
+}
+
+
+/* Responsive design para m�viles - versi�n actualizada */
+@media (max-width: 768px) {
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .social-icons .icon {
+        font-size: 2rem;
     }
 }

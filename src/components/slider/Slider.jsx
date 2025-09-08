@@ -1,14 +1,55 @@
-import React from "react";
+﻿import React from "react";
 import "./Slider.css";
-import { FaYoutube, FaSoundcloud } from "react-icons/fa";
+import { FaYoutube, FaSoundcloud, FaSpotify } from "react-icons/fa";
 
 const Slider = () => {
   return (
     <section className="media-library" id="projects">
+      {/* SPOTIFY - PRIMERO */}
       <div className="embed-container seccion-negra">
         <div
           className="embed-title"
           data-aos="fade-right"
+          data-aos-easing="ease-in-sine"
+        >
+          <FaSpotify className="platform-icon spotify-icon" />
+          <h2>Spotify</h2>
+        </div>
+        <div
+          className="spotify-embed"
+          data-aos="fade-right"
+          data-aos-easing="ease-in-sine"
+        >
+          <iframe
+            width="800"
+            height="800"
+            src="https://open.spotify.com/embed/artist/71Z20965pNEjGlGnzIZEak?utm_source=generator&theme=0"
+            title="Lucio Magi Spotify"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div className="spotify-embed-mobile">
+          <iframe
+            width="100%"
+            height="600"
+            src="https://open.spotify.com/embed/artist/71Z20965pNEjGlGnzIZEak?utm_source=generator&theme=0"
+            title="Lucio Magi Spotify"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      {/* YOUTUBE - SEGUNDO */}
+      <div className="embed-container">
+        <div
+          className="embed-title"
+          data-aos="fade-left"
           data-aos-easing="ease-in-sine"
         >
           <FaYoutube className="platform-icon youtube-icon" />
@@ -16,7 +57,7 @@ const Slider = () => {
         </div>
         <div
           className="youtube-embed"
-          data-aos="fade-right"
+          data-aos="fade-left"
           data-aos-easing="ease-in-sine"
         >
           <iframe
@@ -42,10 +83,11 @@ const Slider = () => {
         </div>
       </div>
 
-      <div className="embed-container">
+      {/* SOUNDCLOUD - TERCERO */}
+      <div className="embed-container seccion-negra">
         <div
           className="embed-title"
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-easing="ease-in-sine"
         >
           <FaSoundcloud className="platform-icon soundcloud-icon" />
@@ -53,7 +95,7 @@ const Slider = () => {
         </div>
         <div
           className="soundcloud-embed"
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-easing="ease-in-sine"
         >
           <iframe

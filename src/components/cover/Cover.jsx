@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import "../cover/Cover.css";
 import coverVideo from "../../media/coverVideo.mp4";
 import LucioMagiTitle from "./LucioMagiTitle";
@@ -9,6 +9,7 @@ import {
   faInstagram,
   faYoutube,
   faSoundcloud,
+  faSpotify,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
@@ -28,6 +29,14 @@ const Cover = () => {
       <LucioMagiTitle />
       <h2 data-aos="zoom-out" >Dj | Productor</h2>
       <div className="social-icons-cover" data-aos="zoom-in">
+        <a
+          href="https://open.spotify.com/intl-es/artist/71Z20965pNEjGlGnzIZEak?si=XUTW_HcQTTWekDlAWWtYoA"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Spotify Lucio Magi"
+        >
+          <FontAwesomeIcon icon={faSpotify} />
+        </a>
         <a
           href="https://soundcloud.com/magi-set"
           target="_blank"

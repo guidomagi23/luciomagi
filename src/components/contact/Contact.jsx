@@ -1,11 +1,12 @@
 import React from "react";
 import "./Contact.css";
-import qrImage from "../../media/QR.png";
 import {
   FaYoutube,
   FaInstagram,
   FaSoundcloud,
+  FaSpotify,
   FaEnvelope,
+  FaLink,
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -17,6 +18,14 @@ const Contact = () => {
           <h2>Redes Sociales</h2>
           <div className="social-content">
             <div className="social-icons">
+              <a
+                href="https://open.spotify.com/intl-es/artist/71Z20965pNEjGlGnzIZEak?si=XUTW_HcQTTWekDlAWWtYoA"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Spotify Lucio Magi"
+              >
+                <FaSpotify className="icon" />
+              </a>
               <a
                 href="https://www.youtube.com/@luciomagi"
                 target="_blank"
@@ -41,15 +50,15 @@ const Contact = () => {
               >
                 <FaInstagram className="icon" />
               </a>
+              <a
+                href="/links"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Links Lucio Magi"
+              >
+                <FaLink className="icon" />
+              </a>
             </div>
-            <a
-              href="https://linktr.ee/luciomagi"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Linktree Lucio Magi"
-            >
-              <img src={qrImage} alt="QR Lucio Magi" className="qr" title="Linktree Lucio Magi"/>
-            </a>
           </div>
         </div>
 
