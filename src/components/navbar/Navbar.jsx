@@ -36,11 +36,6 @@ const Navbar = ({ isScrolling }) => {
         <li onClick={() => scrollToSection("about")}>Acerca de</li>
         <li onClick={() => scrollToSection("projects")}>Lanzamientos</li>
         <li onClick={() => scrollToSection("contact")}>Contacto</li>
-        <li>
-          <Link to="/links" onClick={() => setIsMenuOpen(false)}>
-            Links
-          </Link>
-        </li>
       </ul>
     </nav>
   );

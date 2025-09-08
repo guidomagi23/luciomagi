@@ -1,4 +1,5 @@
-import React from "react";
+﻿import React from "react";
+import { Link } from "react-router-dom";
 import "./Contact.css";
 import {
   FaYoutube,
@@ -50,14 +51,9 @@ const Contact = () => {
               >
                 <FaInstagram className="icon" />
               </a>
-              <a
-                href="/links"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Links Lucio Magi"
-              >
+              <Link to="/links" title="Links Lucio Magi">
                 <FaLink className="icon" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -66,9 +62,13 @@ const Contact = () => {
         <div className="booking-section">
           <h2>Contacto de Reservas</h2>
           <div className="booking-content">
-            <a href="mailto:luciiomagi@gmail.com" className="email-link" title="Email Lucio Magi">
+            <a
+              href="mailto:luciiomagi@gmail.com"
+              className="email-link"
+              title="Email Lucio Magi"
+            >
               <FaEnvelope className="icon email-icon" />
-              <span className="email-text" >luciiomagi@gmail.com</span>
+              <span className="email-text">luciiomagi@gmail.com</span>
             </a>
           </div>
         </div>
