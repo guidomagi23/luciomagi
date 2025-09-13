@@ -30,6 +30,14 @@ function App() {
     });
   }, []);
 
+  // Manejar redirección de GitHub Pages
+  useEffect(() => {
+    const path = (/#!(\/.*)$/.exec(location.hash) || [])[1];
+    if (path) {
+      history.replaceState(null, null, path);
+    }
+  }, []);
+
   return (
     <Router basename="/luciomagi">
       <div className="App">
