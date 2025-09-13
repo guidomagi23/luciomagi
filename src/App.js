@@ -1,5 +1,5 @@
 ﻿import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Cover from "./components/cover/Cover";
 import Navbar from "./components/navbar/Navbar";
@@ -30,16 +30,9 @@ function App() {
     });
   }, []);
 
-  // Manejar redirección de GitHub Pages
-  useEffect(() => {
-    const path = (/#!(\/.*)$/.exec(location.hash) || [])[1];
-    if (path) {
-      history.replaceState(null, null, path);
-    }
-  }, []);
 
   return (
-    <Router basename="/luciomagi">
+    <Router>
       <div className="App">
         <Routes>
           <Route
