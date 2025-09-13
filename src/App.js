@@ -1,5 +1,5 @@
 ﻿import React, { useState, useEffect } from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Cover from "./components/cover/Cover";
 import Navbar from "./components/navbar/Navbar";
@@ -31,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/luciomagi">
       <div className="App">
         <Routes>
           <Route
