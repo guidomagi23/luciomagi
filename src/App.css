@@ -1,6 +1,54 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Material Icons', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Material Icons", sans-serif;
+}
+
+:root {
+  --section-dark-glow: radial-gradient(
+    circle at top center,
+    rgba(59, 130, 246, 0.09),
+    transparent 24%
+  );
+  --section-dark-gradient: linear-gradient(180deg, #020305 0%, #06090d 24%, #04070a 100%);
+  --section-dark-surface: var(--section-dark-glow), var(--section-dark-gradient);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: #030507;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+#root,
+.App {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 24%),
+    linear-gradient(180deg, #020305 0%, #05080c 32%, #030507 100%);
 }

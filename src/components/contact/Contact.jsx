@@ -1,24 +1,28 @@
-﻿import React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 import "./Contact.css";
 import {
-  FaYoutube,
+  FaEnvelope,
   FaInstagram,
+  FaLink,
   FaSoundcloud,
   FaSpotify,
-  FaEnvelope,
-  FaLink,
+  FaYoutube,
 } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <section className="contact" id="contact">
       <div className="contact-wrapper">
-        {/* SOCIAL MEDIA */}
-        <div className="social-media-section">
-          <h2>Redes Sociales</h2>
+        <div className="social-media-section" data-aos="fade-right">
+          <p className="contact-kicker">Redes & comunidad</p>
+          <h2>Conectá con Lucio Magi</h2>
+          <p className="contact-copy">
+            Encuentra novedades, lanzamientos, videos y todos los links
+            oficiales desde las plataformas principales.
+          </p>
           <div className="social-content">
             <div className="social-icons">
               <a
@@ -68,17 +72,21 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* BOOKING CONTACT */}
-        <div className="booking-section">
-          <h2>Contacto de Reservas</h2>
+        <div className="booking-section" data-aos="fade-left">
+          <p className="contact-kicker">Booking</p>
+          <h2>Contacto directo</h2>
+          <p className="contact-copy">
+            Para consultas, fechas, colaboraciones o contrataciones, este es el
+            canal directo.
+          </p>
           <div className="booking-content">
             <a
-              href="mailto:luciiomagi@gmail.com"
+              href="mailto:luciomagi@gmail.com"
               className="email-link"
               title="Email Lucio Magi"
             >
               <FaEnvelope className="icon email-icon" />
-              <span className="email-text">luciiomagi@gmail.com</span>
+              <span className="email-text">luciomagi@gmail.com</span>
             </a>
           </div>
         </div>

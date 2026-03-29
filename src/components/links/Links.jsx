@@ -1,6 +1,6 @@
 ﻿import React, { useEffect, useRef, useState } from "react";
 import "./Links.css";
-import lucioImage from "../../media/lucio-magi-link.jpg";
+import lucioImage from "../../media/aboutImagenLinks.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -231,12 +231,14 @@ const Links = () => {
 
         <div className="profile-section">
           <p className="profile-badge">Official Links</p>
-          <img
-            src={lucioImage}
-            alt="Lucio Magi"
-            className="profile-image"
-            title="Lucio Magi - DJ y Productor"
-          />
+          <div className="profile-image-frame">
+            <img
+              src={lucioImage}
+              alt="Lucio Magi"
+              className="profile-image"
+              title="Lucio Magi - DJ y Productor"
+            />
+          </div>
           <h1 className="profile-name">LUCIO MAGI</h1>
           <p className="profile-handle">@luciomagi</p>
           <p className="profile-description">DJ | Productor</p>

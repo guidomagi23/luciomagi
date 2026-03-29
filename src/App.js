@@ -1,5 +1,7 @@
-﻿import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./App.css";
 import Cover from "./components/cover/Cover";
 import Navbar from "./components/navbar/Navbar";
@@ -8,28 +10,31 @@ import Slider from "./components/slider/Slider";
 import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/Contact";
 import Links from "./components/links/Links";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 function App() {
   const [scrollHeight, setScrollHeight] = useState(0);
 
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setScrollHeight(position);
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, [scrollHeight]);
+    const updateScroll = () => {
+      setScrollHeight(window.scrollY);
+    };
+
+    updateScroll();
+    window.addEventListener("scroll", updateScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", updateScroll);
+    };
+  }, []);
 
   useEffect(() => {
     AOS.init({
-      duration: 2300, // duración de la animación
-      once: true, // si quieres que se ejecute solo una vez
+      duration: 1200,
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 40,
     });
   }, []);
-
 
   return (
     <Router>

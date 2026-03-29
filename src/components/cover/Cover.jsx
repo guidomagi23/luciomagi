@@ -15,6 +15,14 @@ import {
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Cover = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div className="cover-container">
       <video
@@ -28,7 +36,7 @@ const Cover = () => {
         title="Lucio Magi - Productor y DJ"
       />
       <LucioMagiTitle />
-      <h2 data-aos="zoom-out" >Dj | Productor</h2>
+      <h2 data-aos="zoom-out">DJ | Productor</h2>
       <div className="social-icons-cover" data-aos="zoom-in">
         <a
           href="https://open.spotify.com/intl-es/artist/71Z20965pNEjGlGnzIZEak?si=XUTW_HcQTTWekDlAWWtYoA"
@@ -74,6 +82,17 @@ const Cover = () => {
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
       </div>
+      <button
+        type="button"
+        className="scroll-indicator"
+        onClick={scrollToAbout}
+        aria-label="Desplazarse hacia abajo"
+        title="Ver más"
+      >
+        <span className="scroll-indicator-mouse">
+          <span className="scroll-indicator-wheel"></span>
+        </span>
+      </button>
     </div>
   );
 };

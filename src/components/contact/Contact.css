@@ -1,164 +1,207 @@
 .contact {
-    background-color: black;
-    color: white;
-    padding: 15rem;
-    height: 90vh;
+  padding: 100px 24px 120px;
+  background:
+    linear-gradient(180deg, #04070a 0%, #06090d 100%);
+  color: white;
 }
 
 .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 4rem;
-    flex-wrap: wrap;
+  max-width: 1380px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 24px;
 }
 
-/* SOCIAL MEDIA */
+.social-media-section,
+.booking-section {
+  padding: 0;
+}
+
+.contact-kicker {
+  margin-bottom: 10px;
+  color: #93c5fd;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
 .social-media-section h2,
 .booking-section h2 {
-    font-weight: bold;
-    font-size: 45px;
-    margin-bottom: 1.5rem;
-    color: white;
-    text-align: center;
+  margin-bottom: 12px;
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
+  line-height: 1;
 }
 
-.booking-section a {
-    padding: 10px 20px;
+.contact-copy {
+  max-width: 520px;
+  color: rgba(218, 225, 232, 0.74);
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 .social-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  margin-top: 26px;
 }
 
 .social-icons {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 520px;
+  gap: 14px;
+  align-items: center;
+}
+
+.social-icons a,
+.email-link {
+  text-decoration: none;
+}
+
+.social-icons a {
+  width: 74px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.03);
+  transition:
+    transform 0.26s ease,
+    border-color 0.26s ease,
+    background 0.26s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  border-color: rgba(59, 130, 246, 0.34);
+  background: rgba(59, 130, 246, 0.08);
 }
 
 .icon {
-    font-size: 3.2rem;
-    color: white;
-    transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 2.2rem;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.icon:hover {
-    transform: scale(1.2);
-    color: rgb(155, 155, 155);
+.social-icons a:hover .icon {
+  transform: scale(1.08);
 }
 
-/* Estilos espec�ficos para cada icono */
 .social-icons a[title*="Spotify"]:hover .icon {
-    color: #1DB954;
+  color: #1db954;
 }
 
 .social-icons a[title*="Youtube"]:hover .icon {
-    color: #FF0000;
+  color: #ff0000;
 }
 
 .social-icons a[title*="Soundcloud"]:hover .icon {
-    color: #FF5500;
+  color: #ff5500;
 }
 
 .social-icons a[title*="Instagram"]:hover .icon {
-    color: #E4405F;
+  color: #e4405f;
 }
 
 .social-icons a[title*="TikTok"]:hover .icon {
-    color: #25F4EE;
+  color: #7b2cff;
 }
 
-.social-icons a[title*="Linktree"]:hover .icon {
-    color: #00C851;
-}
-
-/* BOOKING SECTION */
-.booking-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.social-icons a[title*="Links"]:hover .icon {
+  color: #60a5fa;
 }
 
 .booking-content {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.email-icon {
-    font-size: 3.2rem;
-}
-
-.email-text {
-    font-size: 1.2rem;
-    font-weight: 300;
+  margin-top: 28px;
 }
 
 .email-link {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    text-decoration: none;
-    color: white;
-    transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 18px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 24px;
+  background: rgba(59, 130, 246, 0.08);
+  color: white;
+  transition:
+    transform 0.26s ease,
+    border-color 0.26s ease,
+    background 0.26s ease;
 }
 
 .email-link:hover {
-    opacity: 0.8;
+  transform: translateY(-2px);
+  border-color: rgba(59, 130, 246, 0.44);
+  background: rgba(59, 130, 246, 0.14);
 }
 
-@media (max-width: 768px) {
-
-    .youtube-embed,
-    .soundcloud-embed {
-        flex: 1 1 100%;
-    }
-
-    .contact {
-        padding: 10px;
-        height: none;
-    }
-
-    .social-media-section h2,
-    .booking-section h2 {
-        font-size: 28px;
-    }
+.email-icon {
+  font-size: 2rem;
+  color: #93c5fd;
 }
 
-
-
-/* Ajustar el �ltimo icono para que est� centrado en la segunda fila */
-.social-icons a:nth-child(5) {
-    grid-column: 2;
+.email-text {
+  font-size: 1.08rem;
+  font-weight: 300;
+  word-break: break-word;
 }
 
+@media (max-width: 900px) {
+  .contact {
+    padding: 88px 18px 96px;
+  }
 
-/* Responsive design para m�viles */
-@media (max-width: 768px) {
-    .social-icons {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-    }
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
 
-    .social-icons a:nth-child(5) {
-        grid-column: 1;
-    }
+  .social-media-section,
+  .booking-section {
+    padding: 0;
+  }
+
+  .social-icons {
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 100%;
+    gap: 8px;
+  }
+
+  .social-icons a {
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .email-link {
+    align-items: flex-start;
+    border-radius: 20px;
+  }
+
+  .email-text {
+    font-size: 0.98rem;
+  }
 }
 
+@media (max-width: 560px) {
+  .social-icons {
+    gap: 6px;
+  }
 
-/* Responsive design para m�viles - versi�n actualizada */
-@media (max-width: 768px) {
-    .social-icons {
-        gap: 1rem;
-    }
+  .social-icons a {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+  }
 
-    .social-icons .icon {
-        font-size: 2rem;
-    }
+  .icon {
+    font-size: 1.35rem;
+  }
 }
