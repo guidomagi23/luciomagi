@@ -70,6 +70,10 @@
     color: #E4405F;
 }
 
+.social-icons a[title*="TikTok"]:hover .icon {
+    color: #25F4EE;
+}
+
 .social-icons a[title*="Linktree"]:hover .icon {
     color: #00C851;
 }

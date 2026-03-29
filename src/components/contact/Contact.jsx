@@ -1,5 +1,7 @@
 ﻿import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 import "./Contact.css";
 import {
   FaYoutube,
@@ -50,6 +52,14 @@ const Contact = () => {
                 title="Instagram Lucio Magi"
               >
                 <FaInstagram className="icon" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@luciomagi_"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="TikTok Lucio Magi"
+              >
+                <FontAwesomeIcon icon={faTiktok} className="icon" />
               </a>
               <Link to="/links" title="Links Lucio Magi">
                 <FaLink className="icon" />

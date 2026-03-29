@@ -1,6 +1,8 @@
 ﻿import React from "react";
 import "./Links.css";
 import lucioImage from "../../media/lucio-magi-link.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 import {
   FaYoutube,
   FaSoundcloud,
@@ -16,31 +18,37 @@ const Links = () => {
     {
       name: "YouTube",
       url: "https://www.youtube.com/@luciomagi",
-      icon: FaYoutube,
+      icon: <FaYoutube />,
       color: "#FF0000",
     },
     {
       name: "SoundCloud",
       url: "https://soundcloud.com/magi-set",
-      icon: FaSoundcloud,
+      icon: <FaSoundcloud />,
       color: "#FF5500",
     },
     {
       name: "Instagram",
       url: "https://www.instagram.com/luciomagi/",
-      icon: FaInstagram,
+      icon: <FaInstagram />,
       color: "#E4405F",
     },
     {
       name: "Spotify",
       url: "https://open.spotify.com/intl-es/artist/71Z20965pNEjGlGnzIZEak?si=XUTW_HcQTTWekDlAWWtYoA",
-      icon: FaSpotify,
+      icon: <FaSpotify />,
       color: "#1DB954",
+    },
+    {
+      name: "TikTok",
+      url: "https://www.tiktok.com/@luciomagi_",
+      icon: <FontAwesomeIcon icon={faTiktok} />,
+      color: "#25F4EE",
     },
     {
       name: "Sitio Web",
       url: "https://luciomagi.github.io/luciomagi/",
-      icon: FaGithub,
+      icon: <FaGithub />,
       color: "#333333",
     },
   ];
@@ -61,7 +69,6 @@ const Links = () => {
 
         <div className="links-section">
           {links.map((link, index) => {
-            const IconComponent = link.icon;
             return (
               <a
                 key={index}
@@ -72,9 +79,7 @@ const Links = () => {
                 style={{ "--link-color": link.color }}
                 title={`${link.name} - Lucio Magi`}
               >
-                <div className="link-icon">
-                  <IconComponent />
-                </div>
+                <div className="link-icon">{link.icon}</div>
                 <span className="link-text">{link.name}</span>
               </a>
             );

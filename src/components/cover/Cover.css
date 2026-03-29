@@ -71,6 +71,10 @@
     color: #E4405F;
 }
 
+.social-icons-cover a[title*="TikTok"]:hover {
+    color: #25F4EE;
+}
+
 .social-icons-cover a[title*="Email"]:hover {
     color: #4285F4;
 }

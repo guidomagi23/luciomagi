@@ -67,8 +67,8 @@
   display: flex;
   align-items: center;
   padding: 16px 20px;
-  background: #fff;
-  border: 2px solid #e1e5e9;
+  background: color-mix(in srgb, var(--link-color) 10%, white);
+  border: 2px solid color-mix(in srgb, var(--link-color) 24%, white);
   border-radius: 12px;
   text-decoration: none;
   color: #333;
@@ -76,14 +76,25 @@
   font-size: 16px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  -webkit-tap-highlight-color: transparent;
 }
 
-.link-item:hover {
+.link-item:hover,
+.link-item:active {
   border-color: var(--link-color);
   background: var(--link-color);
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.link-icon {
+  color: var(--link-color);
+}
+
+.link-item:hover .link-icon,
+.link-item:active .link-icon {
+  color: white;
 }
 
 .link-icon {
@@ -173,6 +184,7 @@
 .link-item:nth-child(3) { animation-delay: 0.3s; }
 .link-item:nth-child(4) { animation-delay: 0.4s; }
 .link-item:nth-child(5) { animation-delay: 0.5s; }
+.link-item:nth-child(6) { animation-delay: 0.6s; }
 
 @keyframes slideInUp {
   from {

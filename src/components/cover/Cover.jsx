@@ -7,6 +7,7 @@ import LucioMagiTitle from "./LucioMagiTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
+  faTiktok,
   faYoutube,
   faSoundcloud,
   faSpotify,
@@ -60,6 +61,14 @@ const Cover = () => {
           title="Instagram Lucio Magi"
         >
           <FontAwesomeIcon icon={faInstagram} />
+        </a>
+        <a
+          href="https://www.tiktok.com/@luciomagi_"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="TikTok Lucio Magi"
+        >
+          <FontAwesomeIcon icon={faTiktok} />
         </a>
         <a href="mailto:luciomagi@gmail.com" title="Email Lucio Magi">
           <FontAwesomeIcon icon={faEnvelope} />
