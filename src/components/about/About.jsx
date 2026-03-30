@@ -8,6 +8,8 @@ const About = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const [shouldAutoSpin, setShouldAutoSpin] = useState(false);
+  const [isPortraitFlipped, setIsPortraitFlipped] = useState(false);
+  const [hasAutoSpun, setHasAutoSpun] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -37,8 +39,7 @@ const About = () => {
   }, []);
 
   useEffect(() => {
-    if (!isInView) {
-      setShouldAutoSpin(false);
+    if (!isInView || hasAutoSpun) {
       return undefined;
     }
 
@@ -46,12 +47,36 @@ const About = () => {
 
     const frameId = window.requestAnimationFrame(() => {
       setShouldAutoSpin(true);
+      setHasAutoSpun(true);
     });
 
     return () => {
       window.cancelAnimationFrame(frameId);
     };
-  }, [isInView]);
+  }, [hasAutoSpun, isInView]);
+
+  const handlePortraitMouseEnter = () => {
+    if (isMobile || shouldAutoSpin) return;
+    setIsPortraitFlipped(true);
+  };
+
+  const handlePortraitMouseLeave = () => {
+    if (isMobile || shouldAutoSpin) return;
+    setIsPortraitFlipped(false);
+  };
+
+  const handlePortraitInteraction = () => {
+    if (shouldAutoSpin) return;
+    if (isMobile) {
+      setIsPortraitFlipped((current) => !current);
+    }
+  };
+
+  const handlePortraitKeyDown = (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    setIsPortraitFlipped((current) => !current);
+  };
 
   return (
     <section
@@ -137,7 +162,14 @@ const About = () => {
           <div
             className={`about-portrait ${
               shouldAutoSpin ? "about-portrait-auto-spin" : ""
-            }`}
+            } ${isPortraitFlipped ? "about-portrait-flipped" : ""}`}
+            onMouseEnter={handlePortraitMouseEnter}
+            onMouseLeave={handlePortraitMouseLeave}
+            onTouchStart={handlePortraitInteraction}
+            onKeyDown={handlePortraitKeyDown}
+            role="button"
+            tabIndex={0}
+            aria-label="Ver otra imagen de Lucio Magi"
           >
             <div
               className="about-portrait-card"

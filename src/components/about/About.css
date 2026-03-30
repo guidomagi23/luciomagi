@@ -70,6 +70,7 @@
   margin: 0 auto;
   perspective: 1600px;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .about-portrait-card {
@@ -85,9 +86,14 @@
   animation: portraitSpinOnce 2.1s cubic-bezier(0.22, 0.61, 0.36, 1) 1 both;
 }
 
-.about-portrait:hover .about-portrait-card {
+.about-portrait-flipped .about-portrait-card {
   animation: none;
   transform: rotateY(180deg);
+}
+
+.about-portrait:focus-visible {
+  outline: 2px solid rgba(147, 197, 253, 0.7);
+  outline-offset: 10px;
 }
 
 .about-portrait-face {
@@ -220,9 +226,5 @@
 
   .about-portrait-card {
     aspect-ratio: 1 / 1.92;
-  }
-
-  .about-portrait:hover .about-portrait-card {
-    transform: none;
   }
 }
