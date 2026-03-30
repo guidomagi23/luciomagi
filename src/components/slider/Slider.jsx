@@ -30,9 +30,9 @@ const platforms = [
     rgb: "255, 0, 0",
     frameClass: "youtube-frame",
     iframe: {
-      src: "https://www.youtube.com/embed/videoseries?si=wMvdzJJE2W_yRs-g&list=PLcmHq1zwllpNrOSxeB57uNDl4Hp6P-ZS3",
+      src: "https://www.youtube.com/embed/videoseries?list=UUZkR6vflVe41FPCBT5DLIkQ&rel=0&playsinline=1",
       title: "Lucio Magi YouTube Playlist",
-      allow: "autoplay; encrypted-media",
+      allow: "autoplay; encrypted-media; picture-in-picture",
       allowFullScreen: true,
     },
   },

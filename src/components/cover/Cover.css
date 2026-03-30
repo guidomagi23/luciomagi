@@ -100,10 +100,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.05);
   color: #ffffff;
   font-size: 1.5rem;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 8px 18px rgba(0, 0, 0, 0.1);
   transition:
     transform 0.28s ease,
     color 0.28s ease,
@@ -113,32 +117,39 @@
 
 .social-icons-cover a:hover {
   transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.11);
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.18);
+  border-color: rgba(var(--social-rgb), 0.34);
+  background: rgba(var(--social-rgb), 0.14);
+  color: var(--social-color);
+  box-shadow:
+    0 16px 28px rgba(0, 0, 0, 0.18),
+    0 0 26px rgba(var(--social-rgb), 0.18);
 }
 
-.social-icons-cover a[title*="Spotify"]:hover {
-  color: #1db954;
+.social-wave-icon-active {
+  animation: socialWaveGlowOnly 1.12s ease var(--wave-delay) 1 both;
 }
 
-.social-icons-cover a[title*="Soundcloud"]:hover {
-  color: #ff5500;
-}
+@keyframes socialWaveGlowOnly {
+  0%,
+  100% {
+    border-color: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.03),
+      0 8px 18px rgba(0, 0, 0, 0.1);
+  }
 
-.social-icons-cover a[title*="Youtube"]:hover {
-  color: #ff0000;
-}
-
-.social-icons-cover a[title*="Instagram"]:hover {
-  color: #e4405f;
-}
-
-.social-icons-cover a[title*="TikTok"]:hover {
-  color: #7b2cff;
-}
-
-.social-icons-cover a[title*="Email"]:hover {
-  color: #60a5fa;
+  35%,
+  60% {
+    border-color: rgba(var(--social-rgb), 0.38);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--social-color);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.03),
+      0 16px 28px rgba(0, 0, 0, 0.18),
+      0 0 28px rgba(var(--social-rgb), 0.22);
+  }
 }
 
 .scroll-indicator {
