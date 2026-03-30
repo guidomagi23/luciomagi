@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./About.css";
-import aboutImagen from "../../media/aboutImagen.png";
+import aboutFront from "../../media/aboutFront.jpeg";
+import aboutBack from "../../media/aboutBack.jpeg";
 
 const About = () => {
   const [showMore, setShowMore] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const [shouldAutoSpin, setShouldAutoSpin] = useState(false);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 960);
@@ -13,8 +17,48 @@ const About = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  useEffect(() => {
+    if (!sectionRef.current) {
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      {
+        threshold: 0.45,
+      }
+    );
+
+    observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isInView) {
+      setShouldAutoSpin(false);
+      return undefined;
+    }
+
+    setShouldAutoSpin(false);
+
+    const frameId = window.requestAnimationFrame(() => {
+      setShouldAutoSpin(true);
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+    };
+  }, [isInView]);
+
   return (
-    <section className="about" id="about">
+    <section
+      ref={sectionRef}
+      className={`about ${isInView ? "about-in-view" : ""}`}
+      id="about"
+    >
       <div className="about-countainer">
         <div className="about-desc" data-aos="fade-right">
           <h1>DJ | Productor</h1>
@@ -90,12 +134,30 @@ const About = () => {
         </div>
 
         <div className="about-img" data-aos="fade-left">
-          <div className="about-portrait">
-            <img
-              src={aboutImagen}
-              alt="Retrato de Lucio Magi actuando en vivo"
-              title="Lucio Magi Dj y Productor"
-            />
+          <div
+            className={`about-portrait ${
+              shouldAutoSpin ? "about-portrait-auto-spin" : ""
+            }`}
+          >
+            <div
+              className="about-portrait-card"
+              onAnimationEnd={() => setShouldAutoSpin(false)}
+            >
+              <div className="about-portrait-face about-portrait-front">
+                <img
+                  src={aboutFront}
+                  alt="Lucio Magi de frente"
+                  title="Lucio Magi Dj y Productor"
+                />
+              </div>
+              <div className="about-portrait-face about-portrait-back">
+                <img
+                  src={aboutBack}
+                  alt="Lucio Magi de perfil"
+                  title="Lucio Magi Dj y Productor"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

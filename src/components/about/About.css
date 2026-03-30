@@ -1,7 +1,7 @@
 .about {
   position: relative;
   overflow: hidden;
-  background: #ffffff;
+  background: var(--section-dark-surface);
 }
 
 .about::before {
@@ -9,10 +9,10 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(44% 36% at 14% 20%, rgba(2, 6, 12, 0.18), transparent 70%),
-    radial-gradient(36% 30% at 84% 52%, rgba(2, 6, 12, 0.16), transparent 72%),
-    radial-gradient(42% 26% at 50% 100%, rgba(15, 23, 42, 0.1), transparent 72%);
-  filter: blur(14px);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 22%),
+    radial-gradient(42% 34% at 14% 20%, rgba(96, 165, 250, 0.16), transparent 70%),
+    radial-gradient(34% 28% at 84% 52%, rgba(59, 130, 246, 0.14), transparent 72%);
+  filter: blur(12px);
   pointer-events: none;
 }
 
@@ -38,7 +38,7 @@
 
 .about-desc > h1 {
   margin-bottom: 28px;
-  color: #0b1320;
+  color: #f8fbff;
   font-size: clamp(2rem, 4vw, 3.3rem);
   line-height: 0.95;
   letter-spacing: 0.04em;
@@ -47,13 +47,13 @@
 }
 
 .about-desc > p {
-  color: rgba(11, 19, 32, 0.8);
+  color: rgba(220, 227, 234, 0.76);
   font-size: 1.02rem;
   line-height: 1.9;
 }
 
 .about-desc b {
-  color: #0b1320;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -66,31 +66,86 @@
 
 .about-portrait {
   position: relative;
-  width: min(100%, 520px);
+  width: min(100%, 400px);
   margin: 0 auto;
-  background: transparent;
-  box-shadow: none;
+  perspective: 1600px;
+  cursor: pointer;
 }
 
-.about-portrait > img {
-  display: block;
+.about-portrait-card {
+  position: relative;
   width: 100%;
-  max-height: 700px;
-  height: auto;
-  object-fit: contain;
+  aspect-ratio: 1 / 2.22;
+  transform-style: preserve-3d;
+  transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+
+.about-portrait-auto-spin .about-portrait-card {
+  animation: portraitSpinOnce 2.1s cubic-bezier(0.22, 0.61, 0.36, 1) 1 both;
+}
+
+.about-portrait:hover .about-portrait-card {
+  animation: none;
+  transform: rotateY(180deg);
+}
+
+.about-portrait-face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 28px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.about-portrait-back {
+  transform: rotateY(180deg);
+}
+
+.about-portrait-face img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.about-portrait-front img {
+  object-position: center 10%;
+}
+
+.about-portrait-back img {
+  object-position: center 12%;
+}
+
+@keyframes portraitSpinOnce {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 .read-more-btn {
   align-self: flex-start;
   margin-top: 20px;
   padding: 11px 18px;
-  border: 1px solid rgba(2, 6, 12, 0.22);
+  border: 1px solid rgba(59, 130, 246, 0.28);
   border-radius: 999px;
-  background: rgba(2, 6, 12, 0.08);
-  color: #0b1320;
+  background: rgba(59, 130, 246, 0.1);
+  color: #eff6ff;
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.52),
-    0 10px 26px rgba(2, 6, 12, 0.08);
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 10px 26px rgba(2, 6, 12, 0.2);
   cursor: pointer;
   transition:
     transform 0.24s ease,
@@ -100,8 +155,8 @@
 
 .read-more-btn:hover {
   transform: translateY(-2px);
-  background: rgba(2, 6, 12, 0.14);
-  border-color: rgba(2, 6, 12, 0.36);
+  background: rgba(59, 130, 246, 0.18);
+  border-color: rgba(59, 130, 246, 0.42);
 }
 
 @media only screen and (max-width: 920px) {
@@ -135,12 +190,12 @@
 
   .about-portrait {
     width: 100%;
-    max-width: 380px;
+    max-width: 350px;
     margin: 0 auto;
   }
 
-  .about-portrait > img {
-    max-height: none;
+  .about-portrait-card {
+    aspect-ratio: 1 / 2.08;
   }
 }
 
@@ -161,5 +216,13 @@
 
   .about-portrait {
     max-width: 100%;
+  }
+
+  .about-portrait-card {
+    aspect-ratio: 1 / 1.92;
+  }
+
+  .about-portrait:hover .about-portrait-card {
+    transform: none;
   }
 }
