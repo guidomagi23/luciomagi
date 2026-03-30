@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import "../cover/Cover.css";
 import coverVideo from "../../media/coverVideo.mp4";
 import LucioMagiTitle from "./LucioMagiTitle";

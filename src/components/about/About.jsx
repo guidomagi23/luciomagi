@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./About.css";
-import aboutFront from "../../media/aboutFront.jpeg";
-import aboutBack from "../../media/aboutBack.jpeg";
+import aboutFront from "../../media/aboutFront.webp";
+import aboutBack from "../../media/aboutBack.webp";
 
 const About = () => {
   const [showMore, setShowMore] = useState(false);

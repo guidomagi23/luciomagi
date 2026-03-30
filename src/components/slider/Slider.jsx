@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Slider.css";
 import { FaSpotify, FaSoundcloud, FaYoutube } from "react-icons/fa";
 
@@ -55,8 +55,32 @@ const platforms = [
 ];
 
 const Slider = () => {
+  const [shouldLoadEmbeds, setShouldLoadEmbeds] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    if (!sectionRef.current || shouldLoadEmbeds) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setShouldLoadEmbeds(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: "240px 0px",
+        threshold: 0.1,
+      }
+    );
+
+    observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, [shouldLoadEmbeds]);
+
   return (
-    <section className="media-library" id="projects">
+    <section className="media-library" id="projects" ref={sectionRef}>
       <div className="media-library-intro" data-aos="fade-up">
         <p className="media-library-kicker">Plataformas</p>
         <h2>Escucha lanzamientos, playlists y sets desde cada canal</h2>
@@ -101,15 +125,29 @@ const Slider = () => {
               </div>
 
               <div className={`embed-shell ${platform.frameClass}`}>
-                <iframe
-                  src={platform.iframe.src}
-                  title={platform.iframe.title}
-                  frameBorder="0"
-                  allow={platform.iframe.allow}
-                  allowFullScreen={platform.iframe.allowFullScreen}
-                  loading="lazy"
-                  scrolling={platform.iframe.scrolling}
-                ></iframe>
+                {shouldLoadEmbeds ? (
+                  <iframe
+                    src={platform.iframe.src}
+                    title={platform.iframe.title}
+                    frameBorder="0"
+                    allow={platform.iframe.allow}
+                    allowFullScreen={platform.iframe.allowFullScreen}
+                    loading="lazy"
+                    scrolling={platform.iframe.scrolling}
+                  ></iframe>
+                ) : (
+                  <div className="embed-placeholder">
+                    <div className="embed-placeholder-icon">
+                      <IconComponent />
+                    </div>
+                    <p className="embed-placeholder-label">{platform.label}</p>
+                    <h4>{platform.name}</h4>
+                    <p className="embed-placeholder-copy">
+                      El reproductor se carga automáticamente al acercarte a esta sección.
+                    </p>
+                    <span className="embed-loading-state">Cargando reproductor...</span>
+                  </div>
+                )}
               </div>
             </article>
           );
