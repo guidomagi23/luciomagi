@@ -81,12 +81,12 @@ const Contact = () => {
           </p>
           <div className="booking-content">
             <a
-              href="mailto:luciomagi@gmail.com"
+              href="mailto:luciiomagi@gmail.com"
               className="email-link"
               title="Email Lucio Magi"
             >
               <FaEnvelope className="icon email-icon" />
-              <span className="email-text">luciomagi@gmail.com</span>
+              <span className="email-text">luciiomagi@gmail.com</span>
             </a>
           </div>
         </div>
