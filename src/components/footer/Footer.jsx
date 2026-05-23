@@ -9,11 +9,11 @@ const Footer = () => {
         <p>
           © Copyright 2025 - {currentYear} | All Rights Reserved | Powered by{" "}
           <a
-            href="https://www.linkedin.com/in/guidomagi/"
+            href="https://www.guidomagi.com.ar"
             target="_blank"
             rel="noreferrer"
             className="sns-links-footer"
-            title="Linkedin Guido Magi"
+            title="Sitio web de Guido Magi"
           >
             <span style={{ lineHeight: "1.5", fontWeight: 900 }}>
               Guido Magi
